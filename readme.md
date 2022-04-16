@@ -8,6 +8,9 @@
 - Rage MP wiki - [link](https://wiki.rage.mp/)
 
 #### Install
+
+- Set your `args` to [docker-compose.yml](docker-compose.yml)
+- Execute:
 ```bash
 docker-compose up --build -d
 ```
