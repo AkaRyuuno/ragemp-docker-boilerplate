@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  server:
+    build:
+      context: ./docker/server
+      args:
+        - USER_NAME=name # whoami
+        - USER_ID=1000 # id -u
+        - GROUP_ID=1000 # id -g
+    volumes:
+      - .:/opt/ragemp-srv
+    ports:
+      - "22005:22005/udp"
+      - "22006:22006"
+    tty: true
